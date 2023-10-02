@@ -6,7 +6,9 @@
    - php artisan db:seed --class=SupervisorSeeder
    - php artisan db:seed --class=UserSeeder
 3. mapping apps check routes/api.php
-4. all users password is same: P@ssW0rd!
+4. method getData show for dateNow, for custom
+   date value, add param ?tanggal=date
+5. all users password is the same: P@ssW0rd!
 
 ==================================================
 * tesLogika / cd tesLogika
