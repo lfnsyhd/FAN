@@ -148,7 +148,7 @@ class EpresenceController extends JWT
     $response['waktu_masuk'] = isset($data[0]->waktu) ? explode(" ", $data[0]->waktu)[1] : null;
     $response['waktu_pulang'] = isset($data[1]->waktu) ? explode(" ", $data[1]->waktu)[1] : null;
     $response['status_masuk'] = isset($data[0]->is_approve) && $data[0]->is_approve ? "APPROVE" : "REJECT";
-    $response['status_pulang'] = isset($data[1]->is_approve) && $data[1]->is_approve ? "APPROVE" : "REJECT";
+    $response['status_pulang'] = isset($data[1]->is_approve) ? ($data[1]->is_approve ? "APPROVE" : "REJECT") : null;
     
     return response()->json([
       'success' => true,
